@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+
+<!--[if IE 8]> 				 <html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width" />
+<title>HeartBit</title>
+
+
+<link rel="stylesheet" href="css/foundation.css" />
+
+<style>
+
+@font-face {
+    font-family: "Minecraftia";
+    src: url(font/Minecraftia.ttf) format("truetype");
+}
+body { 
+    font-family: "Minecraftia", Verdana, Tahoma;
+}
+
+header#homepage.homeslide-3 {
+	background-position: center top;
+}
+
+header#homepage {
+	background-color: #000;
+	/*background-position: center bottom;
+	background-repeat: no-repeat;*/
+	padding: 10px 0 0;
+	margin-bottom: 20px;
+}
+
+.automargin {
+	margin: auto;
+	text-align: center;
+	padding-top: 20x;
+	padding-bottom: 20px;
+}
+
+.imgEffect {
+	/*-webkit-box-shadow: 3px 3px 5px #bbbbbb;
+	-moz-box-shadow: 3px 3px 5px #bbbbbb;
+	box-shadow: 3px 3px 5px #bbbbbb;*/
+}
+
+body {
+	background-color: #000;
+}
+
+.loader {
+	padding-top: 10px;
+}
+
+.progressbarplay {
+	cursor: pointer;
+	overflow: hidden;
+	height: 8px;
+	margin-bottom: 8px;
+	background-color: #F7F7F7;
+	background-image: -moz-linear-gradient(top, whiteSmoke, #F9F9F9);
+	background-image: -ms-linear-gradient(top, whiteSmoke, #F9F9F9);
+	background-image: -webkit-gradient(linear, 0 0, 0 100%, from(whiteSmoke),
+		to(#F9F9F9) );
+	background-image: -webkit-linear-gradient(top, whiteSmoke, #F9F9F9);
+	background-image: -o-linear-gradient(top, whiteSmoke, #F9F9F9);
+	background-image: linear-gradient(top, whiteSmoke, #F9F9F9);
+	background-repeat: repeat-x;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5',
+		endColorstr='#f9f9f9', GradientType=0 );
+	-webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-moz-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+}
+
+.progressbarplay .bar {
+	cursor: pointer;
+	background: #4496C6;
+	width: 0;
+	height: 8px;
+	color: white;
+	font-size: 12px;
+	text-align: center;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+	-webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: width .6s ease;
+	-moz-transition: width .6s ease;
+	-ms-transition: width .6s ease;
+	-o-transition: width .6s ease;
+	transition: width .6s ease;
+}
+
+#dz-root {
+-webkit-box-shadow: 3px 3px 5px #bbbbbb;
+	-moz-box-shadow: 3px 3px 5px #bbbbbb;
+	box-shadow: 3px 3px 5px #bbbbbb;
+	
+	text-align: center;
+}
+
+.buttonContainer {
+    /*padding-bottom: 28px;*/
+}
+
+.howDo {
+	font-family: "Minecraftia", Verdana, Tahoma;
+	color: white;	
+}
+
+#tagValue {
+	font-family: "Minecraftia", Verdana, Tahoma;
+	background-color: #fff;
+	border: none;
+	color: black;
+}
+
+#tagValue:active {
+	font-family: "Minecraftia", Verdana, Tahoma;
+	border: none;
+}
+
+</style>
+
+</head>
+<body>
+	<!-- Content Slider -->
+
+	<header id="homepage" class="homeslide-3">
+		<div class="row">
+			<div class="large-12 columns">
+			<div class="hide-for-small">
+				<h1 style="padding-right: 50px; margin-right:700px;"><img src="img/logotype.png" width="537" height="110"/></h1>
+			</div>
+			
+			<div class="show-for-small">
+				<h1><img src="img/logotype.png" width="537" height="110"/></h1>
+			</div>
+			
+				
+				<h4 class="howDo">> How do you beat today?</h4>
+				<div class="large-12 columns">
+					<div class="row">
+						
+
+						<div class="hide-for-small">
+						<div class="large-9 small-12 columns">
+							<input type="text" id="tagValue"
+								placeholder="> Insert a lyric here and hit the heart..." style="margin-top: 5px;">
+							<!--  input type="hidden" id="dataValue"-->
+						</div>
+							<div class="large-3 small-12 columns" id="buttonContainer">
+								<a id="searchTag" class="clean-gray" href="#"><img id="heartImg" src="img/pixel_heart_white.png" width="50" height="50"/></a>
+							</div>
+						</div>
+						
+						<div class="show-for-small">
+						<div class="large-9 small-12 columns">
+							<input type="text" id="tagValueSmall"
+								placeholder="> Insert a lyric here..." style="margin-top: 5px;">
+							<!--  input type="hidden" id="dataValue"-->
+						</div>
+							<div class="small-12 columns" id="buttonContainer" style="width:100%; margin:auto;">
+								<a id="searchTagSmall" class="clean-gray" href="#">
+									<img id="heartImg" src="img/pixel_heart_white.png" width="400" height="400"/>
+								</a>
+							</div>
+						</div>
+						
+						
+					</div>
+				</div>
+
+			</div>
+
+		</div>
+
+	</header>
+
+	<div class="row">
+		<div class="large-12 columns"  style="margin: auto;">
+			<div id="dz-root" style="display: none"></div>
+		</div>
+	</div>
+
+	<div class="row" style="height:20px">
+	</div>
+
+	<div class="row">
+		<div id="example"></div>
+	</div>
+
+	<script>
+		document.write('<script src='
+				+ ('__proto__' in {} ? 'js/vendor/zepto' : 'js/vendor/jquery')
+				+ '.js><\/script>')
+	</script>
+
+
+	<script src="js/foundation.min.js"></script>
+	<script
+		src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+	<script src="js/vendor/loader.js"></script>
+	<script type="text/javascript"
+		src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.16/jquery-ui.min.js"></script>
+	<script src="js/vendor/jquery.blockUI.js"></script>
+	<script src="http://cdn-files.deezer.com/js/min/dz.js"></script>
+
+
+
+	<script>
+		var dataValue;
+		
+		function clickInvocation(selector) {
+			$("#dz-root").css("display", "none");
+			$("#example").html("");
+			var elem = $(selector).val();
+			if(elem=="")
+				alert("Please insert a lyric!");
+			else
+				tagLoader(true, elem);
+		}
+
+		$(document).ready(function() {
+			$("#searchTag").click(function() {
+				clickInvocation("#tagValue");
+			});
+			
+			
+			$("#searchTagSmall").click(function() {
+				clickInvocation("#tagValueSmall");
+			});
+			
+			$("#tagValue").keyup(function(event){
+			    if(event.keyCode == 13){
+			    	clickInvocation("#tagValue");
+			    }
+			});
+			
+			$("#tagValueSmall").keyup(function(event){
+			    if(event.keyCode == 13){
+			    	clickInvocation("#tagValueSmall");
+			    }
+			});
+		});
+
+		
+		//sideScrolling("#next");
+
+		$(window).scroll(
+				function() {
+					if ($(window).scrollTop() + $(window).height() == $(
+							document).height()) {
+						tagLoader(false);
+						
+					}
+				});
+
+		
+	</script>
+</body>
+</html>
