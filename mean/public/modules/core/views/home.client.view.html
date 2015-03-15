@@ -17,7 +17,10 @@
 		</div>
 		<div>
 			<div class="row">
-				<div class="col-md-12 tagValue"> heart@bit><input type="text" ng-change="alert($element.length)"/><blink>|</blink>
+				<div class="col-md-12 tagValue"> heart@bit>
+				<span ng-controller="IncreasingInputController as ic">
+				<input type="text" ng-model="ic.inputData" ng-change="ic.increaseSize()" ng-trim="false" style="width: 5px;" />
+				</span><blink>|</blink>
 					<!--  input type="hidden" id="dataValue"-->
 				</div>
 			</div>

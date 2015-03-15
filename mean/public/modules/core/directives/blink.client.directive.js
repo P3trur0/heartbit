@@ -20,7 +20,7 @@ angular.module('core').directive('blink',
 
                 showElement();
             },
-            template: '<span ng-transclude></span>',
+            template: '<span ng-transclude style="margin-left: -2px;"></span>',
             replace: true
         };
     }
