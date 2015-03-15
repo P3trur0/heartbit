@@ -1,0 +1,65 @@
+@font-face {
+	font-family: 'Minecraftia';
+	src: url('../../core/font/Minecraftia.eot?#iefix') format('embedded-opentype'), 
+	url('../../core/font/Minecraftia.woff') format('woff'), 
+	url('../../core/font/Minecraftia.ttf')  format('truetype'),
+	url('../../core/font/Minecraftia.svg#Minecraftia') format('svg');
+}
+
+.content {
+	margin-top: 50px;
+	background-color: #1A1A1A;
+}
+
+body {
+	background-color: #1A1A1A;
+}
+
+.lead {
+	font-family: "Minecraftia", Verdana, Tahoma;
+}
+
+.undecorated-link:hover {
+	text-decoration: none;
+}
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+	display: none !important;
+}
+.ng-invalid.ng-dirty {
+	border-color: #FA787E;
+}
+.ng-valid.ng-dirty {
+	border-color: #78FA89;
+}
+
+.jumbotron {
+	background-color: #1A1A1A;
+	color: #fff;
+}
+
+.tagValue {
+	font-family: "Minecraftia", Verdana, Tahoma;
+	background-color: #1A1A1A;
+	color: white;
+	width: 100%;
+	margin: 1em 0 14em 0;
+	border: none;
+}
+
+.tagValue:active {
+	font-family: "Minecraftia", Verdana, Tahoma;
+}
+
+.tagValue input {
+	background-color: #1A1A1A;
+	border: none;
+}
+
+@media (max-width: 767px) {
+	.tagValue {
+		margin: 0 0 1em 0;
+	}
+
+
+
+}

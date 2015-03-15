@@ -57,9 +57,9 @@
 
 
 		<dependency>
-			<groupId>com.mashape.unicorn</groupId>
-			<artifactId>unicorn-java</artifactId>
-			<version>1.0.0</version>
+			<groupId>com.mashape.unirest</groupId>
+			<artifactId>unirest-java</artifactId>
+			<version>1.4.5</version>
 		</dependency>
 
 		<dependency>
