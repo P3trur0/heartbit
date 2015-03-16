@@ -42,7 +42,7 @@ public class App
         ArrayList<TrackDeezer> DZTracks=new ArrayList<TrackDeezer>();
         ArrayList<Track> tracks=new ArrayList<Track>();
         ArrayList<Integer> tracksDezeerIDs= new ArrayList<Integer>();
-        MusixMatch mm=new MusixMatch("fd38745933c0390c6be67beeb6195a82");
+        MusixMatch mm=new MusixMatch("HERE GOES THE KEY");
         String artist="";
         JsonObject JO=null, innerObject=null;
         Iterator it=null;
