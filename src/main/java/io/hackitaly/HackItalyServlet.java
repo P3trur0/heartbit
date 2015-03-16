@@ -26,12 +26,6 @@ import com.mashape.unicorn.request.HttpRequest;
 @SuppressWarnings("serial")
 public class HackItalyServlet extends HttpServlet {
 
-	//	public void doGet(HttpServletRequest req, HttpServletResponse resp)
-	//			throws IOException {
-	//		resp.setContentType("text/plain");
-	//		resp.getWriter().println("Hello, world");
-	//	}
-
 	private JsonArray listOfTags;
 	private JsonArray listOfUrls;
 	
@@ -105,39 +99,6 @@ public class HackItalyServlet extends HttpServlet {
 			listOfTags.add(singleTag);
 		}
 	}
-
-	//	private 
-	//
-	//	private JSONArray invokeDiffbot(HttpServletRequest request) throws JSONException {
-	//
-	//		String url = (String) request.getParameter("url");
-	//		String type = (String) request.getParameter("call");
-	//		String query = null;
-	//		if(type.equalsIgnoreCase("frontpage")) {
-	//			query = this.getFrontpageQuery(url);
-	//		}
-	//
-	//		else
-	//			query = this.getArticleQuery(url);
-	//
-	//		HttpRequest req = Unicorn.get(query).header("X-Mashape-Authorization", "hQjRSDUZ6zOnC0e4Wrbw7hAc9uCWflti");
-	//		JsonNode json = req.asJson().getBody();
-	//		JSONObject obj = json.getObject();
-	//		return obj.getJSONArray("tags");
-	//	}
-	//
-	//	private String getArticleQuery(String url) {
-	//		return "https://diffbot-diffbot.p.mashape.com/article?token=ab795311ff2c4d476b8afa5ff2a0cd8e&url="+url+"&timeout=15000&tags=%3Ctrue%3E&html=%3Ctrue%3E";
-	//	}
-	//
-	//	private String getFrontpageQuery(String url) {
-	//		return "https://diffbot-diffbot.p.mashape.com/frontpage?token=ab795311ff2c4d476b8afa5ff2a0cd8e&url="+url+"&format=json";
-	//	}
-	//
-	//	@Override
-	//	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
-	//		this.doGet(request, response);
-	//	}
 
 	private JsonObject invokeInstagram(String tag) {
 		HttpClient hc = new DefaultHttpClient();
