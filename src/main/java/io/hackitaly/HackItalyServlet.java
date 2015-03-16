@@ -141,7 +141,7 @@ public class HackItalyServlet extends HttpServlet {
 
 	private JsonObject invokeInstagram(String tag) {
 		HttpClient hc = new DefaultHttpClient();
-		HttpGet get = new HttpGet("https://api.instagram.com/v1/tags/"+tag+"/media/recent?client_id=c23ca7ef53a04f23901061da33f813c7");
+		HttpGet get = new HttpGet("https://api.instagram.com/v1/tags/"+tag+"/media/recent?client_id=HERE_GOES_CLIENT_ID");
 		try {
 			HttpResponse resp = hc.execute(get);
 			String response = EntityUtils.toString(resp.getEntity(), "UTF-8");
@@ -161,12 +161,5 @@ public class HackItalyServlet extends HttpServlet {
 	
 	
 
-	public static void main(String[] args) {
-		String url = "www.repubblica.it";
-
-		String query = "https://diffbot-diffbot.p.mashape.com/article?token=ab795311ff2c4d476b8afa5ff2a0cd8e&url="+url+"&timeout=15000&tags=%3Ctrue%3E&summary=%3Ctrue%3E";
-
-		HttpRequest req = Unicorn.get(query).header("X-Mashape-Authorization", "hQjRSDUZ6zOnC0e4Wrbw7hAc9uCWflti");
-		System.out.println(req.asJson().getBody());
-	}
+//main method removed
 }
