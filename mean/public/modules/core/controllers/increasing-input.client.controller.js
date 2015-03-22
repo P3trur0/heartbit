@@ -3,7 +3,7 @@
 angular.module('core').controller('IncreasingInputController', ['$element',
 
     function($element) {
-        this.inputData = "";
+        this.inputData = '';
 
         this.increaseSize = function() {
             var sizeIncrease = $element.children().val().length + 1;
@@ -11,7 +11,7 @@ angular.module('core').controller('IncreasingInputController', ['$element',
 
             if (widthIncrease <= 20)
                 widthIncrease = 30;
-            if (sizeIncrease == 0)
+            if (sizeIncrease === 0)
                 sizeIncrease = 2;
 
             $element.children().css('size', sizeIncrease + 'em');
